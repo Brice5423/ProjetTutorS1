@@ -1,0 +1,1059 @@
+/*########################################
+#  Auteur: Cadet Gauthier, le 04/11/2019 #
+# OS: Windows 10 64bits, Sublime text 3  #
+#									                       #
+# Titre: CSS site projet web 		         #
+########################################*/
+
+/*########################################
+# codes couleurs utilisés:				       #
+#									                    	 #
+# saumon: #FFA07A				             		 #
+# saumon foncé: DARKSALMON	             #
+# jaune(header): #FFEC81;			        	 #
+# 										                   #
+# orange: #E8992D;		          				 #
+# vert: #44B05B;			             			 #
+# bleu: #6FB6CA;			             			 #
+# violet: #AD80D6;			           			 #
+# gris(bio et projet): #9D9D9D;
+# gris1: #AEB6BF;							     	#
+# gris2: #85929E;										#
+# gris3: #5D6D7E;										#
+# gris4: #34495E;										#
+# rouge: #CB3030;				             		 #
+# 									                   	 #
+# jaune(footer liens): #D9DF67;   			 #
+# bleu(footer): #272635;				         #
+#									                    	 #
+########################################*/
+
+@font-face { font-family: 'Ubuntu';
+ 						src: url('polices/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+/*########################################################################################################################
+	Styles pour le contenu du body*/
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+/*body pour section Mangas*/
+
+body.mangaM {
+	background-color: grey;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: 15% 40%;
+	background-position: left center;
+	background-attachment: fixed;
+	font-size: 100%;
+	z-index: 0;
+}
+
+.Demon_S_M{
+	max-height: 50%;
+}
+
+.DR_Stone_M {
+	max-height: 50%;
+}
+
+.Parasyte_M {
+	max-height: 50%;
+}
+/*body pour section Musiques*/
+
+body.musiqueM{
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.travisS{
+	background-image: url('images/musique/Travis_fond.jpg');
+	background-color: DARKSALMON;
+}
+
+.Nekfeu{
+	background-image: url('images/musique/Les_etoiles_vagabondes.jpg');
+	background-color: black;
+}
+
+.Orelsan {
+	background-image: url('images/musique/Orelsan_Fond.jpg');
+	background-color: #1c384e;
+}
+
+/*########################################################################################################################
+	Styles pour le contenu du header*/
+
+header.haut{
+	width: 100%;
+	height: 30vh;
+	top: 0px;
+	float: left;
+	background-color: #FFEC81;
+	border-bottom: 2vh solid lightgrey;
+	margin: 0;
+}
+
+header.ART_mobile{
+	width: 100%;
+	height: 10vh;
+	top: 0px;
+	float: left;
+	background-color: rgba(0,0,0,0.4);
+	border-bottom: 1vh solid lightgrey;
+	margin: 0;
+	z-index: 1;
+	display: flex;
+}
+
+h1.titre_accueil {
+	font-size: 4em;
+	text-align: center;
+	font-family: 'Ubuntu', helvetica, arial, sans-serif;
+}
+
+/*########################################*/
+/* css menu animé*/
+.center-icon{
+  text-align: center;
+}
+
+.scene {
+	width: 100px;
+	height: 90px;
+	display: inline-block;
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	margin: 15px;
+
+
+	transform-style: preserve-3d;
+	transition: all 0.3s ease-out;
+	transform-origin: 0 0;
+}
+
+.scene:hover .box {
+	transform: rotateX(-90deg);
+	cursor: pointer;
+}
+
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-origin: 0 0;
+  text-align: center;
+}
+
+.front {
+	transform: rotateX(0deg);
+	background-color: #ffffff;
+  text-align: center;
+}
+
+.lower {
+	transform: rotateX(90deg);
+	top: 100px;
+	background-color: #272635;
+	color: #FFEC81;
+	font-size: 1.2rem;
+	font-family: helvetica;
+}
+
+.icon_menu {
+	width: 85%;
+}
+
+/* Styles pour le bouton de retour animé*/
+
+
+section.boutonRR, .boutonRR_M{
+	float: left;
+	margin: 1% 0 0 20px;
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+  text-align: center;
+}
+
+.scene2 {
+	width: 140px;
+	height: 70px;
+  text-align: center;
+}
+
+.box2 {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	margin: 0 -30px 30px -30px;
+
+	transform-style: preserve-3d;
+	transition: all 0.3s ease-out;
+	transform-origin: 0 0;
+}
+
+.scene2:hover .box2 {
+	transform: rotateY(-90deg);
+	cursor: pointer;
+}
+
+.face2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-origin: 0 0;
+  text-align: center;
+}
+
+.front2 {
+	transform: rotateY(0deg);
+	background-color: #BABABA;
+}
+
+.right2 {
+	transform: rotateY(90deg);
+	left: 80px;
+	background-color: #198caf;
+	color: #F1F1F1;
+	font-size: 1.2rem;
+	font-family: Helvetica;
+}
+
+p#textB2 {
+	font-size: 1.3em;
+	font-family: Helvetica;
+	padding-left: 40px;
+}
+
+.retour {
+	width: 70px;
+}
+
+/*########################################*/
+
+
+/*########################################################################################################################
+	Styles pour le contenu de la page*/
+
+/*########################################*/
+/* css commun ARTICLE*/
+
+.gauche {
+	background-color: #ffffff;
+	box-shadow: 15px 15px 1px black;
+	margin: 8% auto 8% auto;
+	padding: 5%;
+	position: relative;
+	top: 15%;
+	width: 20%;
+	display: inline-block;
+	overflow: auto;
+	resize: horizontal;
+	max-width: 34%;
+	min-width: 15%;
+}
+
+.gaucheG {
+	background-color: #ffffff;
+	box-shadow: 15px 15px 1px black;
+	margin: 8% auto 8% auto;
+	padding: 5%;
+	position: relative;
+	top: 15%;
+	width: 34%;
+	display: inline-block;
+}
+
+.droite {
+	background-color: #ffffff;
+	box-shadow: 15px 15px 1px black;
+	margin: 8% auto 8% 10%;
+	padding: 5%;
+	position: relative;
+	top: 15%;
+	width: 35%;
+	display: inline-block;
+}
+
+a.centre {
+	font-family: helvetica;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	margin: 5%;
+	padding: 5%;
+	background-color: grey;
+	box-shadow: 5px 5px 1px black;
+}
+
+
+.imag_article {
+	width: 90%;
+}
+
+/*########################################*/
+/* css commun bouton*/
+
+.vert:hover {
+	color: #f1fff1;
+	background-color: #44B05B;
+}
+
+.orange:hover {
+	color: #f1fff1;
+	background-color: #E8992D;
+}
+
+.bleu:hover {
+	color: #f1fff1;
+	background-color: #6FB6CA;
+}
+
+.violet:hover {
+	color: #f1fff1;
+	background-color: #AD80D6;
+}
+
+.rouge:hover {
+	color: #f1fff1;
+	background-color: #CB3030;
+}
+
+.gras:hover {
+	font-weight: bold;
+	font-size: 93%;
+}
+
+.blanc{
+	color: white;
+	font-family: 'Ubuntu', helvetica, arial, sans-serif;
+	padding: 15px;
+}
+.big{
+	font-size: 2em;
+}
+.medium{
+	font-size: 1.5em;
+}
+.small{
+	font-size: 1em;
+}
+
+h2.titre_article {
+	font-size: 4em;
+	text-align: center;
+	font-family: 'Ubuntu', helvetica, arial, sans-serif;
+	margin-bottom: 0;
+}
+
+h2.titre_sous_article{
+	font-size: 1.5em;
+	font-family: helvetica;
+	color: white;
+	margin-left: 10px;
+}
+
+p {
+	font-family: helvetica;
+	padding: 5%;
+}
+
+
+/*########################################*/
+/* css menu animé sous article*/
+
+.scene3 {
+	width: 100px;
+	height: 90px;
+	display: inline-block;
+}
+
+.box3 {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	margin: 15px;
+
+
+	transform-style: preserve-3d;
+	transition: all 0.3s ease-out;
+	transform-origin: 0 0;
+}
+
+.scene3:hover .box3 {
+	transform: rotateX(-90deg);
+	cursor: pointer;
+}
+
+.face3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-origin: 0 0;
+}
+
+.front3 {
+	transform: rotateX(0deg);
+	background-color: #ffffff;
+}
+
+.lower3 {
+	transform: rotateX(90deg);
+	top: 100px;
+	background-color: #272635;
+	color: #FFEC81;
+	font-size: 1.2rem;
+	font-family: helvetica;
+}
+
+.icon_menu3 {
+	width: 85%;
+}
+
+
+/*##################*/
+/* css ARTICLE Manga*/
+
+.ART1 {
+    background-color: #FFC58C;
+    width: 90%;
+    height: 100vh;
+    padding: 3% 5% 2% 5%;
+    display: inline-block;
+}
+
+
+body.mangaM{
+
+    color: white;
+    font-family: Arial;
+}
+
+article.mangaM{
+    background-color: rgba(0,0,0,0.8);
+    border: 155px solid transparent;
+    padding: 20px;
+    border-image: url('images/mangas/Demon-Slayer/fond-Demon_Slayer.jpg') 70;
+    border-image-repeat: round;
+
+}
+
+article.mangaM h2.mangaM {
+    text-align: center;
+}
+
+li.mangaM {
+    list-style-type: none;
+    display: flex;
+}
+p.mangaI{
+    margin: -35px;
+    margin-bottom: 50px;
+}
+
+p.mangaI2{
+    margin: -35px;
+    margin-bottom: 120px;
+}
+
+p.mangaI3{
+    margin: -35px;
+    margin-bottom: 110px;
+}
+
+img.Demon_S_M{
+    width: 40vh;
+    height: 60vh;
+    float: left;
+    padding: 20px;
+}
+
+img.Dr_Stone_M{
+    width: 40vh;
+    height: 60vh;
+    float: left;
+    padding: 20px;
+}
+
+img.Parasyte_M{
+    width: 40vh;
+    height: 60vh;
+    float: left;
+    padding: 20px;
+}
+
+img.mangaM {
+    width: 190px;
+    height: 110px;
+    margin-right: 10px;
+    margin-top: 45px;
+    padding: 5px;
+    float: left;
+}
+
+/*#############################################################################################################################################################*/
+/* css ARTICLE Jeux Vidéos*/
+
+.ART2 {
+	background-color: #B6E876;
+	width: 90%;
+	height: 100vh;
+	padding: 3% 5% 2% 5%;
+	display: inline-block;
+}
+
+.espace_vide{
+    width:100%;
+    height: 100vh;
+    content: "";
+}
+/*****************************/
+
+	/* en tête */
+header.jeuxvideo {
+	width: 100%;
+	height: 30vh;
+	top: 0px;
+	float: left;
+	background-color:  #E8992D;
+	margin: 0;
+}
+.MenuJeuxCouleur{
+	transform: rotateX(90deg);
+	top: 100px;
+	background-color: #272635;
+	color: #E8992D;
+	font-size: 1.2rem;
+	font-family: helvetica;
+}
+
+	/* Commun */
+.JM_Centrer {
+	margin: auto;
+	padding: 0;
+	max-width: 1100px;
+	text-align: justify;
+}
+
+.JM_FondFixe {
+	z-index: -1;
+	position: fixed;
+	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100vw;
+}
+
+.JM_ImgCentrer {
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
+.Marge h1, .Marge p {
+	margin: 0;
+	color: white;
+}
+.Marge h1 {
+	padding: 2%;
+	font-size: 30px;
+}
+.Marge p {
+	padding: 1% 5% 3% 5%;
+}
+
+
+	/* Fallout 4 */
+.FImgNom {
+	margin-top: 28vh;
+	width: 35%;
+}
+.FFond {
+	background-image: url('images/Jeux-videos/Fallout_4/Fallout_Fond.jpg');
+}
+.FFallout {
+	background-image: url('images/Jeux-videos/Fallout_4/Fallout_Fallout.jpg');
+}
+.FCadre {
+	background-image: url('images/Jeux-videos/Fallout_4/Fallout_Cadre.jpg');
+}
+.FGameplay {
+	background-image: url('images/Jeux-videos/Fallout_4/Fallout_Gameplay.jpg');
+}
+
+	/* GTA 5 */
+.GImgNom {
+	margin-top: 36vh;
+	width: 35%;
+}
+.GFond {
+	background-image: url('images/Jeux-videos/GTA_5/GTA_Fond.jpg');
+}
+.GGTA {
+	background-image: url('images/Jeux-videos/GTA_5/GTA_GTA.jpeg');
+}
+.GPerso {
+	background-image: url('images/Jeux-videos/GTA_5/GTA_Perso.jpg');
+}
+.GMulti {
+	background-image: url('images/Jeux-videos/GTA_5/GTA_Multi.jpg');
+}
+
+	/* Skyrim */
+.SImgNom {
+	margin-top: 36vh;
+	width: 30%;
+}
+.SFond {
+	background-image: url('images/Jeux-videos/Skyrim/Skyrim_Fond.jpg');
+}
+.SSkyrim {
+	background-image: url('images/Jeux-videos/Skyrim/Skyrim.jpg');
+}
+.SExt1 {
+	background-image: url('images/Jeux-videos/Skyrim/SkyrimExt1.jpg');
+}
+.SExt2 {
+	background-image: url('images/Jeux-videos/Skyrim/SkyrimExt2.jpg');
+}
+.SExt3 {
+	background-image: url('images/Jeux-videos/Skyrim/SkyrimExt3.jpg');
+}
+
+
+/*#########################################################################################################################################*/
+
+/*#################*/
+/* css ARTICLE Musique*/
+
+.ART3 {
+	background-color: #8FE7FF;
+	width: 90%;
+	height: 100vh;
+	padding: 3% 5% 2% 5%;
+	display: inline-block;
+}
+
+header.musique{
+	width: 100%;
+	height: 30vh;
+	top: 0px;
+	float: left;
+	background-color:  #AE8FFF;
+	border-bottom: 2vh solid lightgrey;
+	margin: 0;
+}
+
+.inferieur{
+	transform: rotateX(90deg);
+	top: 100px;
+	background-color: #272635;
+	color: #AE8FFF;
+	font-size: 1.2rem;
+	font-family: helvetica;
+}
+
+.article_musique{
+	width: 90%;
+	height: 60vh;
+	padding: 3% 5% 2% 5%;
+	display: inline-block;
+}
+
+.presentation_album{
+	margin: 0px auto 0px auto;
+	width: 80%;
+	height: 60%;
+	background-color: rgba(0,0,0,0.5);
+	padding: 5%;
+}
+
+.cover_album{
+	border: 4px solid lightgrey;
+	width: 25%;
+	float: left;
+}
+
+.album{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+li.musique{
+	list-style-type: none;
+}
+
+li.titreN{
+    list-style-type: none;
+    width: 155%;
+    padding: 0;
+    margin: 0;
+}
+
+.titreN{
+    list-style-type: none;
+    text-align: left;
+}
+
+.tracklistNekfeu{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.tracklistNekfeu div{
+    display: flex;
+}
+.tracklistNekfeu div>div{
+  flex: 1;
+  width: 20vh;
+  height: 50vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  margin: 5%;
+}
+
+.tracklistN{
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+}
+
+.tracklistN div{
+  display: flex;
+}
+.tracklistN div>div{
+  flex: 1;
+  width: 30%;
+  height: 50vh;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 10px;
+  margin: 5%;
+}
+.tracklistN div audio{
+  margin: auto;
+}
+.tracklistN a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.tracklistN a:hover{
+  background-color: #CB3030;
+}
+.tracklistN td{
+  width: 15%;
+  height: 15%;
+}
+.tracklistN table a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.tracklistN table{
+  margin: auto;
+}
+
+iframe{
+  border: none;
+  width: 90%;
+  height: 315px;
+  margin: auto;
+}
+
+/*########################################*/
+/* css ARTICLE Sport*/
+
+.ART4 {
+	background-color: #AE8FFF;
+	width: 90%;
+	height: 100vh;
+	padding: 3% 5% 2% 5%;
+	display: inline-block;
+}
+
+.article{
+	width: 90%;
+	height: 100vh;
+	padding: 3% 5% 2% 5%;
+}
+
+header.sport{
+	width: 100%;
+	height: 30vh;
+	top: 0px;
+	float: left;
+	background-color: #6FB6CA;
+	border-bottom: 2vh solid lightgrey;
+	margin: 0;
+}
+
+.low{
+	transform: rotateX(90deg);
+	top: 100px;
+	background-color: #272635;
+	color: #6FB6CA;
+	font-size: 1.2rem;
+	font-family: helvetica;
+}
+
+.ficheID{
+	background-color: #C8A0EC;
+  display: inline-block;
+}
+
+.depart{
+	background-color: #AD80D6;
+}
+
+.palmares{
+	background-color: #9464BF;
+	height: 160vh;
+}
+
+.record{
+	background-color: #75469E;
+}
+
+.boite_table{
+	box-shadow: 15px 15px 1px black;
+	background-color: white;
+}
+
+.drapeau-table{
+	width: 80px;
+}
+
+table,th,td{
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+.gaucheG table,.droite table{
+  background-color: lightgrey;
+}
+
+.gaucheGtd,th{
+	padding: 10px;
+}
+
+caption,th,td{
+	font-family: helvetica;
+}
+
+caption{
+	font-weight: bold;
+	font-size: 1.2em;
+	background-color: #6FB6CA;
+	padding: 15px;
+}
+
+.map{
+  width: 90%;
+  height: 450px;
+}
+
+.art-size{
+	height: 100vh;
+}
+
+.liens-paragraphe{
+	text-decoration: none;
+	color: #7D3C98 ;
+}
+
+.liens-paragraphe:hover{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.images-paragraphe{
+	width: 35px;
+}
+
+/*########################################*/
+/* css biographie*/
+
+.BIO {
+	background-color: #9D9D9D;
+	width: 90%;
+	height: 100vh;
+	padding: 3% 5% 2% 5%;
+	display: inline-block;
+}
+
+/*########################################*/
+/* css projet*/
+
+#projet-boite{
+	margin: 0;
+	width: 100%;
+}
+
+#projet{
+	background-color: #AEB6BF;
+}
+#projet div{
+  text-align: justify;
+}
+
+#projet div,#charte div{
+  margin: auto;
+  width: 60%;
+  height: 65%;
+  background-color: white;
+  box-shadow: 10px 10px;
+}
+
+#organigramme{
+	background-color: #85929E ;
+}
+#organigramme img,#charte img{
+  width: 95%;
+}
+
+#charte{
+	background-color: #5D6D7E ;
+}
+#charte div{
+  text-align: center;
+}
+
+#repartition{
+	background-color: #34495E;
+}
+#repartition img{
+  margin: 0;
+  width: 90%;
+}
+
+#repartition div:not(.flex-container),#repartition figure, #PROJET div{
+  width: 50vh;
+  text-align: center;
+  margin: 5vh;
+  height: 45vh;
+  box-shadow: 10px 10px;
+  padding: 1%;
+  background-color: white;
+}
+.flex-container{
+  display: flex;
+}
+.flex-container>*{
+  flex: 1;
+  margin: auto;
+}
+
+/*########################################################################################################################
+	Styles pour le contenu des boites*/
+
+.TBmere {
+	margin: 0px auto 0px auto;
+  text-align: center;
+}
+
+.troisbox {
+	width: 19%;
+	height: 99%;
+	margin: 6%;
+	background-color: lightgrey;
+	box-shadow: 5px 5px 1px black;
+	display: inline-block;
+}
+
+.imgbox {
+	width: 80%;
+}
+
+.titre_boite {
+	font-size: 1.8em;
+	text-align: center;
+	font-family: 'Ubuntu', helvetica, arial, sans-serif;
+	margin-bottom: 0;
+}
+
+p.theme {
+	font-size: 95%;
+	font-family: helvetica;
+}
+
+.borderBAS {
+	border-bottom: 4px solid white;
+	margin: 10px 7px 10px 7px;
+}
+
+.drapeau {
+	float: right;
+	margin-right: 15px;
+	width: 60%;
+}
+
+.bas {
+	margin-top: 15px;
+}
+
+.resize {
+	font-size: 95%;
+}
+
+.retourligne {
+	clear: both;
+}
+
+/*########################################################################################################################
+	Styles pour le contenu du footer*/
+
+.footer{
+	width: 100%;
+	height: 29vh;
+	background-color: #272635;
+	margin: 0;
+  text-align: center;
+}
+
+h3,a.foot {
+	font-family: helvetica;
+}
+
+.foot {
+	text-align: left;
+	text-decoration: none;
+	color: #807E97;
+}
+
+.foot:hover {
+	color: #D9DF67;
+}
+
+.bottom {
+	margin: 5% auto 0 auto;
+	width: 25%;
+	color: lightgrey;
+	display: inline-block;
+}
+
+.left {}
+
+.middle {
+	border-left: 3px solid white;
+	border-right: 3px solid white;
+}
+
+.right {}
